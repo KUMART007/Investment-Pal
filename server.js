@@ -1,6 +1,5 @@
 const path = require('path');
 const express = require('express');
-const mongoose = require('mongoose');
 const helmet = require('helmet');
 const cors = require('cors');
 const session = require('express-session');
@@ -21,10 +20,6 @@ app.use(session({ secret: 'TBD', resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(cors(corsOptions));
-
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/Project-3database';
-mongoose.set('useUnifiedTopology', true);
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === 'production') {
