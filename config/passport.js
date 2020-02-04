@@ -21,6 +21,7 @@ passport.use(new LocalStrategy(
     }
 
     // Login success
+    // eslint-disable-next-line no-undef
     return done(null, user);
   },
 ));
