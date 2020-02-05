@@ -3,8 +3,8 @@ import React from "react";
 function Signup() {
     return (
     <div>
-    <card>
-    <form>     
+    
+    <form class="w-50 mx-auto">     
             <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
@@ -15,7 +15,6 @@ function Signup() {
             </div>
         
 </form>
-</card>
 </div>
 );
 }
