@@ -1,6 +1,4 @@
 import React from "react";
-import Nav from "../nav/index";
-import { Switch } from "react-router";
 
 function Signup() {
     return (
