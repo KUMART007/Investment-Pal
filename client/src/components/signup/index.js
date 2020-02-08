@@ -12,7 +12,7 @@ function Signup() {
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             <label for="exampleInputPassword1">Password</label>
             <input type="password" class="form-control" id="exampleInputPassword1" />
-            <button type="submit" class="btn"><a class="nav-link" href="/profile">Sign Up</a></button>
+            <button type="submit" class="btn"><a class="nav-link btn btn-outline-dark" href="/profile">Sign Up</a></button>
             </div>
         
 </form>
