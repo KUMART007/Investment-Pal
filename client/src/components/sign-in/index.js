@@ -12,7 +12,7 @@ function SignIn() {
             <input type="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
             <label for="exampleInputPassword1">Password</label>
             <input type="password" class="form-control" id="exampleInputPassword1" />
-            <button type="submit" class="btn"><a class="nav-link" href="/profile">Sign In</a></button>
+            <button type="submit" class="btn"><a class="nav-link btn btn-outline-dark" href="/profile">Sign In</a></button>
             </div>
         
 </form>
