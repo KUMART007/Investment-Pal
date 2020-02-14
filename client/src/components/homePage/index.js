@@ -1,10 +1,9 @@
 import React from 'react';
-import Nav from "../components/nav/index"
 
 function Home() {
     return (
         <div>
-        <Nav/>
+            <h1>Home / page</h1>
         </div>
     );
 }
