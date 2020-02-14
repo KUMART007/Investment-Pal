@@ -1,11 +1,14 @@
 const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');
+const configuration = require('../config/config');
 
 const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
 // eslint-disable-next-line
-const config = require(`${__dirname}/../config/config.js`)[env];
+// const config = require(`${__dirname}/../config/config.js`)[env];
+const config = configuration[env];
+
 const db = {};
 
 let sequelize;

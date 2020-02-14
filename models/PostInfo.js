@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
     },
   });
   PostInfo.associate = (models) => {
-    PostInfo.hasOne(models.User, {
+    PostInfo.belongsTo(models.User, {
       foreignKey: 'userId',
     });
   };
