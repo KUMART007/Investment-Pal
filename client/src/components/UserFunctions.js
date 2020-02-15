@@ -28,3 +28,18 @@ export const login = user => {
             console.log('User does not exist!')
         })
 }
+
+// export const posts = newPost => {
+//     return axios
+//         .post('/api/v1/posts', {
+//             title: newPost.title,
+//             body: newPost.body,
+//             user_id: newPost.user_id,
+//             user_name: newPost.user_name,
+//             like_user_id: newPost.like_user_id,
+//             likes: newPost.likes
+//         })
+//         .then(res => {
+//             console.log('New Post Made.');
+//         })
+// }
