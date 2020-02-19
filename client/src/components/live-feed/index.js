@@ -1,4 +1,5 @@
 import React from 'react';
+import RetrieveHeadlines from './HeadlineCard';
 
 
 function LiveFeed() {
@@ -9,7 +10,9 @@ function LiveFeed() {
         <p className="lead"></p>
         <hr className="my-4" />
         <p></p>
+        
         </div>
+        <RetrieveHeadlines/>
     </div>
     );
 }
