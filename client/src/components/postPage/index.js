@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Jumbotron, Container} from 'reactstrap';
+import { Jumbotron, Container} from 'reactstrap';
 import PostModal from 'components/postPage/modal';
 
 function PostPage() {
