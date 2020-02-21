@@ -13,7 +13,7 @@ const PostModal = (props) => {
 
   return (
     <div>
-      <Button color="dark" onClick={toggle}>{buttonLabel} Make a post!</Button>
+      <Button color="success" size="lg" onClick={toggle}>{buttonLabel} Make a post!</Button>
       <Modal isOpen={modal} toggle={toggle} className={className}>
         <ModalHeader toggle={toggle}>Make a Post</ModalHeader>
         <ModalBody>
@@ -27,7 +27,7 @@ const PostModal = (props) => {
             </Form>
         </ModalBody>
         <ModalFooter>
-          <Button color="primary" onClick={toggle}>Post</Button>{' '}
+          <Button color="outline-success" onClick={toggle}>Post</Button>{' '}
           <Button color="secondary" onClick={toggle}>Cancel</Button>
         </ModalFooter>
       </Modal>

@@ -1,12 +1,14 @@
 import React from 'react';
-import { Jumbotron, Container} from 'reactstrap';
-import PostModal from 'components/postPage/modal';
+import { Container, Jumbotron } from 'reactstrap';
+import PostModal from './modal';
 
 function PostPage() {
     return (
         <Jumbotron>
+            <div className="text-center">
             <PostModal />
-            <Container ClassName="allPosts">
+            </div>
+            <Container className="allPosts">
             </Container>
         </Jumbotron>
 
