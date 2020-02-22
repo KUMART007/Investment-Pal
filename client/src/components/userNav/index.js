@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
-import { Container, Navbar } from 'reactstrap';
+import { Container } from 'reactstrap';
 
 class UserNav extends Component {
     logOut(e) {
