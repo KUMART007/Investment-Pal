@@ -5,12 +5,16 @@ import CardContent from '@material-ui/core/CardContent';
 import Box from '@material-ui/core/Box';
 
 
+import { AllHtmlEntities } from 'html-entities';
+
+const entities = new AllHtmlEntities();
 
 export default class RetrieveHeadlines extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            headlines: []
+            headlines: [],
+            output:[]
         }
     }
 
@@ -36,19 +40,17 @@ export default class RetrieveHeadlines extends Component {
                 </div>
                 <br />
                 <div>
-                                {this.state.headlines.map(headline =>
-                                <Box mt="15px">
-                                <Card>
-                                <CardContent>
-                                <div>
-                                <div key={headline.id}>
-                                    <h2>{headline.title}</h2>
-                                    <h4>{headline.summary}</h4>
-                                <br/>
-                                <h5>
-                                    <a href={headline.title}>{headline.link}</a>
-                                </h5>
-                            </div>
+                    {this.state.headlines.map(headline =>
+                        <Box mt="15px">
+                        <Card>
+                        <CardContent>
+                        <div key={headline.id}>
+                                <h2>{entities.decode(headline.title)}</h2>
+                                <h3>{entities.decode(headline.summary)}</h3>
+                                <h4>
+                                    <a href={headline.link}>Continue Reading</a>
+                                </h4>
+                            <br />
                         </div>
                         </CardContent>
                         </Card>
