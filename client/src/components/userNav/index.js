@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
-import { Container } from 'reactstrap';
+import { Container, Navbar } from 'reactstrap';
 
 class UserNav extends Component {
     logOut(e) {
@@ -21,7 +21,9 @@ class UserNav extends Component {
                         Register <span className="sr-only">(current)</span>
                     </Link>
                 </li>
+                
             </ul>
+            
 
 
 
@@ -54,6 +56,7 @@ class UserNav extends Component {
         return (
             
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                
                 <Container>
                 <button className="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -73,6 +76,7 @@ class UserNav extends Component {
                     {localStorage.usertoken ? userLink : loginRegLink}
                 </div>
                 </Container>
+
             </nav>
             
         )

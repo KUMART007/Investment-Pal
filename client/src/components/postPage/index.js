@@ -1,9 +1,10 @@
 import React from 'react';
-import { Container, Jumbotron } from 'reactstrap';
+import { Container, Jumbotron, Card, CardBody } from 'reactstrap';
 import PostModal from './modal';
 
 function PostPage() {
     return (
+        <div>
         <Jumbotron>
             <div className="text-center">
             <PostModal />
@@ -12,6 +13,17 @@ function PostPage() {
             </Container>
         </Jumbotron>
 
+        <Jumbotron>
+                <Container>
+                <Card>
+                    <CardBody>
+                        <p></p>
+                    </CardBody>
+                </Card>
+
+            </Container>
+        </Jumbotron>
+        </div>
     );
 }
 
