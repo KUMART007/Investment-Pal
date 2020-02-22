@@ -11,7 +11,6 @@ function LiveFeed() {
                     <h1 className="display-3 text-center text-success">Daily Investment News</h1>
                         <p className="lead"></p>
                         <hr className="my-4" />
-                        <p></p>
                 </div>
         <RetrieveHeadlines/>
             </div>

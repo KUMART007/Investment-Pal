@@ -13,8 +13,7 @@ export default class RetrieveHeadlines extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            headlines: [],
-            output:[]
+            headlines: []
         }
     }
 
@@ -23,7 +22,6 @@ export default class RetrieveHeadlines extends Component {
             .then(res => {
                 const headlines = res.data;
                 this.setState({ headlines });
-                console.log(headlines);
             })
     }
 
@@ -34,17 +32,18 @@ export default class RetrieveHeadlines extends Component {
                 <div>
                 <Card align="center" width={1}>
                 <CardContent>
-                <h1>Headlines source: <h4><a href="https://soundmindinvesting.com/articles">https://soundmindinvesting.com/articles</a></h4></h1>
+                <h1>Headlines source: </h1>
+                <h4><a href="https://soundmindinvesting.com/articles">https://soundmindinvesting.com/articles</a></h4>
                 </CardContent>
                 </Card>
                 </div>
                 <br />
                 <div>
                     {this.state.headlines.map(headline =>
-                        <Box mt="15px">
+                        <Box mt="15px" key={headline.id}>
                         <Card>
                         <CardContent>
-                        <div key={headline.id}>
+                        <div >
                                 <h2>{entities.decode(headline.title)}</h2>
                                 <h3>{entities.decode(headline.summary)}</h3>
                                 <h4>
