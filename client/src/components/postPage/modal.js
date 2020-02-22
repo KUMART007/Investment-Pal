@@ -13,16 +13,16 @@ const PostModal = (props) => {
 
   return (
     <div>
-      <Button color="success" size="lg" onClick={toggle}>{buttonLabel} Make a post!</Button>
-      <Modal isOpen={modal} toggle={toggle} className={className}>
+      <Button color="success" size="lg" onClick={toggle}>{buttonLabel} Create a Post</Button>
+      <Modal size="xl" isOpen={modal} toggle={toggle} className={className}>
         <ModalHeader toggle={toggle}>Make a Post</ModalHeader>
         <ModalBody>
             <Form>
-                <FormGroup>
+                <FormGroup >
                     <Label for="exampleText">Title</Label>
                     <Input />
                     <Label for="exampleText">Text Area</Label>
-                    <Input type="textarea" name="text" id="exampleText" />
+                    <Input style={{height: '200px'}} type="textarea" name="text" id="exampleText" />
                 </FormGroup>
             </Form>
         </ModalBody>

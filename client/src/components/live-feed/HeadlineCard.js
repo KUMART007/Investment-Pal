@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import Box from '@material-ui/core/Box';
+
+
 import { AllHtmlEntities } from 'html-entities';
 
 const entities = new AllHtmlEntities();
@@ -25,13 +30,20 @@ export default class RetrieveHeadlines extends Component {
     render() {
         return (
             <div>
-
+                <React.Fragment>
                 <div>
-                    <h1>Headlines source: <a href="https://soundmindinvesting.com/articles">https://soundmindinvesting.com/articles</a></h1>
+                <Card align="center" width={1}>
+                <CardContent>
+                <h1>Headlines source: <h4><a href="https://soundmindinvesting.com/articles">https://soundmindinvesting.com/articles</a></h4></h1>
+                </CardContent>
+                </Card>
                 </div>
                 <br />
                 <div>
                     {this.state.headlines.map(headline =>
+                        <Box mt="15px">
+                        <Card>
+                        <CardContent>
                         <div key={headline.id}>
                                 <h2>{entities.decode(headline.title)}</h2>
                                 <h3>{entities.decode(headline.summary)}</h3>
@@ -40,8 +52,12 @@ export default class RetrieveHeadlines extends Component {
                                 </h4>
                             <br />
                         </div>
+                        </CardContent>
+                        </Card>
+                        </Box>
                     )}
                 </div>
+                </React.Fragment>
             </div>
         );
     }
