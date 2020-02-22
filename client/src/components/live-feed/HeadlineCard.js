@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { AllHtmlEntities } from 'html-entities';
+
+const entities = new AllHtmlEntities();
 
 export default class RetrieveHeadlines extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            headlines: []
+            headlines: [],
+            output:[]
         }
     }
 
@@ -28,15 +32,13 @@ export default class RetrieveHeadlines extends Component {
                 <br />
                 <div>
                     {this.state.headlines.map(headline =>
-                        <div className>
-                            <div key={headline.id}>
-                                <h2>{headline.title}</h2>
-                                <h3>{headline.summary}</h3>
+                        <div key={headline.id}>
+                                <h2>{entities.decode(headline.title)}</h2>
+                                <h3>{entities.decode(headline.summary)}</h3>
                                 <h4>
-                                    <a href={headline.title}>{headline.link}</a>
+                                    <a href={headline.link}>Continue Reading</a>
                                 </h4>
-                            </div>
-                            <br/>
+                            <br />
                         </div>
                     )}
                 </div>

@@ -6,7 +6,10 @@ const Scrape = () => {
     articles: {
       listItem: '.article',
       data: {
-        title: 'a',
+        title: {
+          selector: 'a',
+          how: 'html',
+        },
         summary: {
           selector: '.article-body',
           how: 'html',
@@ -19,6 +22,7 @@ const Scrape = () => {
     },
   }, (err, { data }) => {
     console.log(err || data);
+
     // eslint-disable-next-line no-plusplus
     for (let i = 0; i < data.articles.length; i++) {
       const simpleData = data.articles[i];
