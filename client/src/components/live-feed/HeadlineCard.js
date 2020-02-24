@@ -18,7 +18,7 @@ export default class RetrieveHeadlines extends Component {
     }
 
     componentDidMount() {
-        axios.get("http://localhost:3001/api/v1/livefeed")
+        axios.get("/api/v1/livefeed")
             .then(res => {
                 const headlines = res.data;
                 this.setState({ headlines });

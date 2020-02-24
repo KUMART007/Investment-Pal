@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Jumbotron, Card, CardBody } from 'reactstrap';
 import PostModal from './modal';
+import Posts from './allPosts';
 
 function PostPage() {
     return (
@@ -17,7 +18,7 @@ function PostPage() {
                 <Container>
                 <Card>
                     <CardBody>
-                        <p></p>
+                    <Posts/>
                     </CardBody>
                 </Card>
 

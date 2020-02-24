@@ -41,6 +41,12 @@ router.route('/posts').post((req, res) => {
     })
 })
 
+router.route('/allposts').get((req, res) => {
+  db.Post.findAll({}).then(allposts => {
+    res.json(allposts)
+  })
+})
+
 module.exports = router;
 
 /*eslint-disable */
