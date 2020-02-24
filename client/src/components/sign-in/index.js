@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { login } from "../UserFunctions"
+import API from "../UserFunctions"
 
 
 class Login extends Component {
@@ -26,7 +26,7 @@ class Login extends Component {
       email: this.state.email,
       password: this.state.password
     }
-    login(user).then(res => {
+    API.login(user).then(res => {
       if (res) {
         this.props.history.push('/profile')
       }

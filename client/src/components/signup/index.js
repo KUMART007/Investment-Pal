@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { register } from "../UserFunctions"
+import API from "../UserFunctions"
 
 
 class Register extends Component {
@@ -30,7 +30,7 @@ class Register extends Component {
             email: this.state.email,
             password: this.state.password
         }
-        register(user).then(res => {
+        API.register(user).then(res => {
                 this.props.history.push(`/login`)
         })
     }
