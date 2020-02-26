@@ -1,10 +1,15 @@
 import React from 'react';
+import { Container, Jumbotron } from 'reactstrap';
 
 function Home() {
     return (
-        <div>
-            <h1>Home / page</h1>
-        </div>
+        <Jumbotron className="bg-success">
+            <Container className="text-center text-white">
+                <h1>Welcome to InvestmentPal</h1>
+                <hr />
+                <h3>The forum that helps you with all your investment decisions</h3>
+            </Container>
+        </Jumbotron>
     );
 }
 

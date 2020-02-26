@@ -1,16 +1,21 @@
 import React from 'react';
-
+import { Container, Jumbotron } from 'reactstrap';
+import RetrieveHeadlines from './HeadlineCard';
 
 function LiveFeed() {
     return (
-        <div class="background-color: #eee;">
-        <div class="jumbotron w-75 p-3 mx-auto">
-        <h1 class="display-4 text-center">Live Feed!</h1>
-        <p class="lead"></p>
-        <hr class="my-4" />
-        <p></p>
-        </div>
-    </div>
+        <Jumbotron>
+            <Container>
+                <div className="background-color: #eee;">
+                <div className="jumbotron w-75 p-3 mx-auto">
+                    <h1 className="display-3 text-center text-success">Daily Investment News</h1>
+                        <p className="lead"></p>
+                        <hr className="my-4" />
+                </div>
+        <RetrieveHeadlines/>
+            </div>
+            </Container>
+        </Jumbotron>
     );
 }
 

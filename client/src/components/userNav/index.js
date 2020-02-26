@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
+import { Container } from 'reactstrap';
 
 class UserNav extends Component {
     logOut(e) {
@@ -20,7 +21,9 @@ class UserNav extends Component {
                         Register <span className="sr-only">(current)</span>
                     </Link>
                 </li>
+                
             </ul>
+            
 
 
 
@@ -42,7 +45,7 @@ class UserNav extends Component {
                     <a className="nav-link" href="/live-feed">Live Feed <span className="sr-only">(current)</span></a>
                 </li>
                 <li className="nav-item active">
-                    <a className="nav-link" href="/post-page">Post Page <span className="sr-only">(current)</span></a>
+                    <a className="nav-link" href="/post-page">Post<span className="sr-only">(current)</span></a>
                 </li>
             </ul>
 
@@ -51,7 +54,10 @@ class UserNav extends Component {
         )
 
         return (
+            
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                
+                <Container>
                 <button className="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -63,14 +69,16 @@ class UserNav extends Component {
                     <ul className="navbar-nav">
                         <li className="nav-item">
                             <Link to="/" className="nav-link">
-                                Home
+                                <h4 className="text-success">InvestmentPal</h4>
                             </Link>
                         </li>
                     </ul>
                     {localStorage.usertoken ? userLink : loginRegLink}
                 </div>
+                </Container>
 
             </nav>
+            
         )
 
     }

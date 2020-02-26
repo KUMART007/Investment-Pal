@@ -3,7 +3,6 @@ const express = require('express');
 const helmet = require('helmet');
 const cors = require('cors');
 const session = require('express-session');
-// // const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const db = require('./models');
 const routes = require('./routes');
@@ -47,9 +46,6 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-// const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/Project3Headlines';
-// mongoose.set('useUnifiedTopology', true);
-// mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 // Dynamically force schema refresh only for 'test'
 const FORCE_SCHEMA = process.env.NODE_ENV === 'test';
 
