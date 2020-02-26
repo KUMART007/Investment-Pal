@@ -20,6 +20,12 @@ export default class Posts extends React.Component {
       })
   }
 
+  // handleOnLike = event => {
+  //   this.setState({
+  //     likes: this.state.likes + 1
+  //   });
+  // };
+
   render() {
     return (
       <div className="posts">
