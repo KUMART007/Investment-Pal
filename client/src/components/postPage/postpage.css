@@ -1,3 +1,16 @@
 .pad{
 padding-top: 15px;
 }
+
+.lineup {
+    display: flex;
+}
+.inline {
+    display: inline-block;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.right {
+    padding-right: 10px;
+}

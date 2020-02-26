@@ -75,7 +75,7 @@ class MakePost extends Component {
                   </div>
                   <div className="form-group">
                     <label htmlFor="body">Body</label>
-                    <input style={{ height: '100px' }} type="text"
+                    <textarea style={{ height: '100px' }} type="text"
                       className="form-control"
                       name="body"
                       minLength="5"
