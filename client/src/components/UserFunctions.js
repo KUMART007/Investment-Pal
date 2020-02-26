@@ -35,9 +35,7 @@ export default {
             .post('/api/v1/posts', {
                 title: newPost.title,
                 body: newPost.body,
-                user_id: newPost.user_id,
                 user_name: newPost.user_name,
-                like_user_id: newPost.like_user_id,
                 likes: newPost.likes
             })
             .then(res => {

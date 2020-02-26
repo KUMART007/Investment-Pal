@@ -1,38 +1,105 @@
-import React, { useState } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input } from 'reactstrap';
+import React, { Component } from 'react';
+import API from "../UserFunctions";
 
-const PostModal = (props) => {
-  const {
-    buttonLabel,
-    className
-  } = props;
 
-  const [modal, setModal] = useState(false);
+class MakePost extends Component {
+  constructor() {
+    super()
+    this.state = {
+      user_name: '',
+      title: '',
+      body: '',
+      likes: 0,
+    }
 
-  const toggle = () => setModal(!modal);
+    this.onChange = this.onChange.bind(this)
+    this.onSubmit = this.onSubmit.bind(this)
 
-  return (
-    <div>
-      <Button color="success" size="lg" onClick={toggle}>{buttonLabel} Create a Post</Button>
-      <Modal size="xl" isOpen={modal} toggle={toggle} className={className}>
-        <ModalHeader toggle={toggle}>Make a Post</ModalHeader>
-        <ModalBody>
-            <Form>
-                <FormGroup >
-                    <Label for="exampleText">Title</Label>
-                    <Input />
-                    <Label for="exampleText">Text Area</Label>
-                    <Input style={{height: '200px'}} type="textarea" name="text" id="exampleText" />
-                </FormGroup>
-            </Form>
-        </ModalBody>
-        <ModalFooter>
-          <Button color="outline-success" onClick={toggle}>Post</Button>{' '}
-          <Button color="secondary" onClick={toggle}>Cancel</Button>
-        </ModalFooter>
-      </Modal>
-    </div>
-  );
+  }
+
+  onChange(e) {
+    this.setState({ [e.target.name]: e.target.value })
+  }
+
+  onSubmit(e) {
+    e.preventDefault()
+    const post = {
+      user_name: this.state.user_name,
+      title: this.state.title,
+      body: this.state.body,
+      likes: this.state.likes
+    }
+    API.post(post).then(res => {
+
+    })
+  }
+
+  render() {
+    return (
+      <div>
+        <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+          Create Post
+         </button>
+        <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div className="modal-dialog" role="document">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title" id="exampleModalLabel">Post</h5>
+                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div className="modal-body">
+                <form onSubmit={this.onSubmit}>
+                  <div className="form-group">
+                    <label htmlFor="user_name">Username</label>
+                    <input type="text"
+                      className="form-control"
+                      name="user_name"
+                      placeholder="Enter Username"
+                      minLength="2"
+                      value={this.state.user_name}
+                      onChange={this.onChange}
+                      required />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="title">Title</label>
+                    <input type="text"
+                      className="form-control"
+                      name="title"
+                      placeholder="Enter title"
+                      minLength="2"
+                      value={this.state.title}
+                      onChange={this.onChange}
+                      required />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="body">Body</label>
+                    <input style={{ height: '100px' }} type="text"
+                      className="form-control"
+                      name="body"
+                      minLength="5"
+                      placeholder="Say Something Here"
+                      value={this.state.body}
+                      onChange={this.onChange}
+                      required />
+                  </div>
+                  <button type="submit"
+                    className="btn btn-lg btn-primary btn-block" data-toggle="validator" data-toggle="modal" data-target="#exampleModal">
+                    Post
+               </button>
+                  <button type="submit"
+                    className="btn btn-lg btn-primary btn-block" data-dismiss="modal">
+                    Cancel
+               </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
 }
 
-export default PostModal;
+export default MakePost;

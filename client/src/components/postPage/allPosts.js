@@ -29,7 +29,7 @@ export default class Posts extends React.Component {
               <CardHeader tag='h3'>{post.title}</CardHeader>
               <CardBody>
                 <CardText>{post.body}</CardText>
-                <Button>like</Button>
+                <Button>likes {post.likes}</Button> 
               </CardBody>
             </Card>
           </div>
