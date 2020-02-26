@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import jwt_decode from 'jwt-decode';
-import { Jumbotron, Container } from 'reactstrap';
+import { Jumbotron } from 'reactstrap';
 import './card.css';
 
 class Profile extends Component {

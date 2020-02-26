@@ -1,8 +1,11 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { Container } from 'reactstrap';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
 
 class UserNav extends Component {
+
     logOut(e) {
         localStorage.removeItem('usertoken')
         this.props.history.push('/')
@@ -21,12 +24,7 @@ class UserNav extends Component {
                         Register <span className="sr-only">(current)</span>
                     </Link>
                 </li>
-                
             </ul>
-            
-
-
-
         )
         const userLink = (
 
@@ -48,39 +46,22 @@ class UserNav extends Component {
                     <a className="nav-link" href="/post-page">Post<span className="sr-only">(current)</span></a>
                 </li>
             </ul>
-
-
-
         )
 
         return (
-            
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                
+
+            <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
                 <Container>
-                <button className="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-
-                <div className="collapse navbar-collapse justify-content-md-center" id="navbar1">
-
-                    <ul className="navbar-nav">
-                        <li className="nav-item">
-                            <Link to="/" className="nav-link">
-                                <h4 className="text-success">InvestmentPal</h4>
-                            </Link>
-                        </li>
-                    </ul>
-                    {localStorage.usertoken ? userLink : loginRegLink}
-                </div>
+                    <Nav.Link href="/"><h4 className="text-success">InvestmentPal</h4></Nav.Link>
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Collapse id="responsive-navbar-nav">
+                        <Nav className="mr-auto">
+                            {localStorage.usertoken ? userLink : loginRegLink}
+                        </Nav>
+                    </Navbar.Collapse>
                 </Container>
-
-            </nav>
-            
+            </Navbar>
         )
-
     }
 }
 export default withRouter(UserNav);

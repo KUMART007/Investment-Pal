@@ -85,7 +85,7 @@ class MakePost extends Component {
                       required />
                   </div>
                   <button type="submit"
-                    className="btn btn-lg btn-primary btn-block" data-toggle="validator" data-toggle="modal" data-target="#exampleModal">
+                    className="btn btn-lg btn-primary btn-block"  data-toggle="modal" data-target="#exampleModal">
                     Post
                </button>
                   <button type="submit"
