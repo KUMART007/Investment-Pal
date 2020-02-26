@@ -1,0 +1,17 @@
+.card-img-top {
+    height: 15vw;
+}
+
+.card {
+    margin: 0px;
+}
+
+
+.container {   
+ max-width: 85%;
+ margin: auto;
+}
+
+#bottomRow {
+    margin-top: 25px;
+}

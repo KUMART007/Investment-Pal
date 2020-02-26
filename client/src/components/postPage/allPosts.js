@@ -20,21 +20,33 @@ export default class Posts extends React.Component {
       })
   }
 
+  // handleOnLike = event => {
+  //   this.setState({
+  //     likes: this.state.likes + 1
+  //   });
+  // };
+
   render() {
     return (
       <div className="posts">
         {this.state.posts.map(post =>
           <div className="pad" key={post.pid}>
-            <Card> 
+            <Card>
               <CardHeader tag='h3'>{post.title}</CardHeader>
               <CardBody>
+                <div className='lineup'>
+                  <h6 className="inline right">Posted by </h6>
+                  <h2 className="inline">{post.user_name}</h2>
+                </div>
+                  <br/>
                 <CardText>{post.body}</CardText>
-                <Button>likes {post.likes}</Button> 
+                <Button>likes </Button> {post.likes}
               </CardBody>
             </Card>
           </div>
         )}
       </div>
+
     )
   }
 }
