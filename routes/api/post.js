@@ -5,21 +5,17 @@ const db = require('../../models');
 
 router.route('/posts').post((req, res) => {
   const postData = {
+    user_name: req.body.user_name,
     title: req.body.title,
     body: req.body.body,
-    user_id: req.body.user_id,
-    user_name: req.body.user_name,
-    like_user_id: req.body.like_user_id,
     likes: req.body.likes
   }
 
   db.Post.findOne({
     where: {
+      user_name: req.body.user_name,
       title: req.body.title,
       body: req.body.body,
-      user_id: req.body.user_id,
-      user_name: req.body.user_name,
-      like_user_id: req.body.like_user_id,
       likes: req.body.likes
     }
   })
@@ -42,7 +38,7 @@ router.route('/posts').post((req, res) => {
 })
 
 router.route('/allposts').get((req, res) => {
-  db.Post.findAll({}).then(allposts => {
+  db.Post.findAll({order: [['pid', 'DESC']]}).then(allposts => {
     res.json(allposts)
   })
 })

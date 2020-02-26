@@ -14,14 +14,8 @@ module.exports = (sequelize, DataTypes) => {
     body: {
       type: DataTypes.STRING,
     },
-    user_id: {
-      type: DataTypes.INTEGER
-    },
     user_name: {
       type: DataTypes.STRING,
-    },
-    like_user_id: {
-      type: DataTypes.INTEGER,
     },
     likes: {
       type: DataTypes.INTEGER,
