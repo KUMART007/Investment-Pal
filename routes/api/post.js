@@ -43,6 +43,31 @@ router.route('/allposts').get((req, res) => {
   })
 })
 
+router.route('/allposts/:id').patch((req, res, next) => { 
+
+  db.Post.increment( 'likes', { where: { pid: req.body.pid } })
+   .then(() => {
+    res.end();
+   })
+   .catch((err) => {
+    console.error(err);
+    next(err);
+   });
+ });
+
+ 
+
+ router.route('/allposts/:id').get((req, res, next) => { 
+
+  db.Post.findOne({ where: { pid: req.body.pid } })
+   .then((results) => {
+    res.json(results);
+   })
+   .catch((err) => {
+    console.error(err);
+    next(err);
+   });
+ });
 module.exports = router;
 
 /*eslint-disable */
