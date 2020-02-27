@@ -47,7 +47,7 @@ export default class RetrieveHeadlines extends Component {
                                 <h2>{entities.decode(headline.title)}</h2>
                                 <h3>{entities.decode(headline.summary)}</h3>
                                 <h4>
-                                    <a href={headline.link}>Continue Reading</a>
+                                    <a href={headline.link} target="_blank"rel="noopener noreferrer">Continue Reading</a>
                                 </h4>
                             <br />
                         </div>
