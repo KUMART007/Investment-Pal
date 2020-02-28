@@ -1,8 +1,9 @@
 import React from 'react';
 import axios from 'axios';
+import Buttons from './like'
 import {
   Card, CardText, CardBody,
-  Button, CardHeader
+  CardHeader
 } from 'reactstrap';
 import './postpage.css'
 
@@ -20,33 +21,26 @@ export default class Posts extends React.Component {
       })
   }
 
-  // handleOnLike = event => {
-  //   this.setState({
-  //     likes: this.state.likes + 1
-  //   });
-  // };
-
   render() {
     return (
       <div className="posts">
         {this.state.posts.map(post =>
           <div className="pad" key={post.pid}>
-            <Card>
+            <Card className="cardPost">
               <CardHeader tag='h3'>{post.title}</CardHeader>
-              <CardBody>
+              <CardBody className="cardBodyPost">
                 <div className='lineup'>
-                  <h6 className="inline right">Posted by </h6>
+                  <h6 className="inline right">Posted by: </h6>
                   <h2 className="inline">{post.user_name}</h2>
                 </div>
                   <br/>
-                <CardText>{post.body}</CardText>
-                <Button>likes </Button> {post.likes}
+                <CardText className="cardText">{post.body}</CardText>
+                <Buttons />
               </CardBody>
             </Card>
           </div>
         )}
       </div>
-
     )
   }
 }

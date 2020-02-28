@@ -7,6 +7,7 @@ import Profile from "./components/profile/Profile";
 import Home from "./components/homePage/index";
 import LiveFeed from "./components/live-feed/index";
 import PostPage from "./components/postPage/index";
+import './App.css';
 
 
 
