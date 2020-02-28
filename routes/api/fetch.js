@@ -8,7 +8,7 @@ router.route('/scrape').post((req, res) => {
 });
 
 router.get('/livefeed', (req, res) => {
-  db.Headline.findAll({})
+  db.Headline.findAll({ order: [['id', 'DESC']] })
     .then((headline) => {
       res.json(headline);
     })
