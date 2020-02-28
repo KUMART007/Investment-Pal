@@ -1,12 +1,9 @@
 
 /* eslint-disable */
-/* eslint-disable no-shadow */
-// eslint-disable
 const express = require('express');
 
 const users = express.Router();
 const cors = require('cors');
-// eslint-disable-next-line no-unused-vars
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 

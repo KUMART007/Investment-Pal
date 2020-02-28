@@ -30,33 +30,33 @@ export default class RetrieveHeadlines extends Component {
         return (
             <div>
                 <React.Fragment>
-                <div>
-                <Card align="center" width={1}>
-                <CardContent>
-                <h1 className="cardHeadline">Headlines source: </h1>
-                <h4 className="cardContent"><a href="https://soundmindinvesting.com/articles" target="_blank"rel="noopener noreferrer">https://soundmindinvesting.com/articles</a></h4>
-                </CardContent>
-                </Card>
-                </div>
-                <br />
-                <div>
-                    {this.state.headlines.map(headline =>
-                        <Box mt="15px" key={headline.id}>
-                        <Card>
-                        <CardContent>
-                        <div>
-                                <h2 className="headlineBody1">{entities.decode(headline.title)}</h2>
-                                <h3 className="headlineBody2">{entities.decode(headline.summary)}</h3>
-                                <h4 className="headlineBody3">
-                                    <a href={headline.link} target="_blank"rel="noopener noreferrer">Continue Reading</a>
-                                </h4>
-                            <br />
-                        </div>
-                        </CardContent>
+                    <div>
+                        <Card align="center" width={1}>
+                            <CardContent>
+                                <h1 className="cardHeadline">Headlines source: </h1>
+                                <h4 className="cardContent"><a href="https://soundmindinvesting.com/articles" target="_blank" rel="noopener noreferrer">https://soundmindinvesting.com/articles</a></h4>
+                            </CardContent>
                         </Card>
-                        </Box>
-                    )}
-                </div>
+                    </div>
+                    <br />
+                    <div>
+                        {this.state.headlines.map(headline =>
+                            <Box mt="15px" key={headline.id}>
+                                <Card>
+                                    <CardContent>
+                                        <div>
+                                            <h2 className="headlineBody1">{entities.decode(headline.title)}</h2>
+                                            <h3 className="headlineBody2">{entities.decode(headline.summary)}</h3>
+                                            <h4 className="headlineBody3">
+                                                <a href={headline.link} target="_blank" rel="noopener noreferrer">Continue Reading</a>
+                                            </h4>
+                                            <br />
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            </Box>
+                        )}
+                    </div>
                 </React.Fragment>
             </div>
         );

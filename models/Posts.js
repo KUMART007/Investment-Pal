@@ -1,7 +1,5 @@
 /* eslint-disable */
-// eslint-disable-next-line no-shadow
 module.exports = (sequelize, DataTypes) => {
-  // eslint-disable-next-line no-shadow
   const Post = sequelize.define('Post', {
     pid: {
       type: DataTypes.INTEGER,

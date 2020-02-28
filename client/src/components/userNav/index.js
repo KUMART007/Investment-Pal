@@ -49,7 +49,6 @@ class UserNav extends Component {
         )
 
         return (
-
             <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
                 <Container>
                     <Nav.Link href="/"><h4 className="text-success">InvestmentPal</h4></Nav.Link>

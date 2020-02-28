@@ -12,10 +12,8 @@ class Register extends Component {
             email: '',
             password: ''
         }
-
         this.onChange = this.onChange.bind(this)
         this.onSubmit = this.onSubmit.bind(this)
-
     }
 
     onChange(e) {

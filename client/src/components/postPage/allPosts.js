@@ -33,7 +33,7 @@ export default class Posts extends React.Component {
                   <h6 className="inline right">Posted by: </h6>
                   <h2 className="inline">{post.user_name}</h2>
                 </div>
-                  <br/>
+                <br />
                 <CardText className="cardText">{post.body}</CardText>
                 <Buttons />
               </CardBody>

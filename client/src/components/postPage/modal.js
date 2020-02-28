@@ -10,10 +10,8 @@ class MakePost extends Component {
       body: '',
       likes: 0,
     }
-
     this.onChange = this.onChange.bind(this)
     this.onSubmit = this.onSubmit.bind(this)
-
   }
 
   onChange(e) {
@@ -29,9 +27,7 @@ class MakePost extends Component {
       likes: this.state.likes
     }
     API.post(post).then(res => {
-      
     })
-
   }
 
   refreshPage() {
@@ -89,7 +85,7 @@ class MakePost extends Component {
                       required />
                   </div>
                   <button onClick={this.refreshPage} type="submit"
-                    className="btn btn-lg btn-primary btn-block"  data-toggle="modal" data-target="#exampleModal">
+                    className="btn btn-lg btn-primary btn-block" data-toggle="modal" data-target="#exampleModal">
                     Post
                </button>
                   <button type="submit"
