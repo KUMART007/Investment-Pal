@@ -1,8 +1,9 @@
 import React from 'react';
 import axios from 'axios';
+import Buttons from './like'
 import {
   Card, CardText, CardBody,
-  Button, CardHeader
+  CardHeader
 } from 'reactstrap';
 import './postpage.css'
 
@@ -20,12 +21,6 @@ export default class Posts extends React.Component {
       })
   }
 
-  // handleOnLike = event => {
-  //   this.setState({
-  //     likes: this.state.likes + 1
-  //   });
-  // };
-
   render() {
     return (
       <div className="posts">
@@ -40,13 +35,12 @@ export default class Posts extends React.Component {
                 </div>
                   <br/>
                 <CardText className="cardText">{post.body}</CardText>
-                <Button>likes </Button> {post.likes}
+                <Buttons />
               </CardBody>
             </Card>
           </div>
         )}
       </div>
-
     )
   }
 }

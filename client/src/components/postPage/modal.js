@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import API from "../UserFunctions";
 
-
 class MakePost extends Component {
   constructor() {
     super()
@@ -30,8 +29,13 @@ class MakePost extends Component {
       likes: this.state.likes
     }
     API.post(post).then(res => {
-
+      
     })
+
+  }
+
+  refreshPage() {
+    window.location.reload(false);
   }
 
   render() {
@@ -84,7 +88,7 @@ class MakePost extends Component {
                       onChange={this.onChange}
                       required />
                   </div>
-                  <button type="submit"
+                  <button onClick={this.refreshPage} type="submit"
                     className="btn btn-lg btn-primary btn-block"  data-toggle="modal" data-target="#exampleModal">
                     Post
                </button>
