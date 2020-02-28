@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import API from "../UserFunctions"
+import API from "../UserFunctions";
+import './style.css';
 
 
 class Register extends Component {
@@ -37,9 +38,9 @@ class Register extends Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="container" id="margin">
                 <div className="row">
-                    <div className="col-md-6 mt-5 mx-auto">
+                    <div className="col-md-6 mt-4 mx-auto">
                         <form onSubmit={this.onSubmit}>
                             <h1 className="h3 mb-3 font-weight-normal">Please sign up</h1>
                             <div className="form-group">

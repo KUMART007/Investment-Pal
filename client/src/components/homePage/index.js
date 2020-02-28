@@ -14,8 +14,8 @@ function Home() {
         </Jumbotron>
 
       
-        <Row className="container" >
-        <Col lg="6">
+        <Row className="container">
+        <Col md="6" lg="6">
         <div className="card">
             <img src="https://cdn.pixabay.com/photo/2017/09/07/08/54/money-2724241__340.jpg" className="card-img-top" id="imgs" alt="img1" />
             <div className="card-body">
@@ -23,7 +23,7 @@ function Home() {
                 </div>
         </div>
         </Col>
-        <Col lg="6">
+        <Col md="6" lg="6">
         <div className="card">
             <img src="https://img.etimg.com/thumb/width-640,height-480,imgsize-95463,resizemode-1,msid-64758447/six-investment-options-for-your-post-retirement-needs.jpg" className="card-img-top" id="imgs" alt="img2" />
             <div className="card-body">
@@ -33,7 +33,7 @@ function Home() {
         </Col>
         </Row>
         <Row className="container" id="bottomRow">
-        <Col lg="6">
+        <Col md="6" lg="6">
         <div className="card">
             <img src="https://store-images.s-microsoft.com/image/apps.15035.13718473831208693.d5dce06b-a7b1-4d73-a0c5-f14168621c9c.da833820-5775-40e9-9713-300eb1dff286?mode=scale&q=90&h=1080&w=1920" className="card-img-top" id="imgs" alt="img3" />
             <div className="card-body">
@@ -41,7 +41,7 @@ function Home() {
                 </div>
         </div>
         </Col>
-        <Col lg="6">
+        <Col md="6" lg="6">
         <div className="card">
             <img src="https://www.investors.com/wp-content/uploads/2019/01/Stock-VRdata-04-adobe.jpg" className="card-img-top" id="imgs" alt="img4" />
             <div className="card-body">
