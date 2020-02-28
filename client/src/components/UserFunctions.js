@@ -39,20 +39,7 @@ export default {
                 likes: newPost.likes
             })
             .then(res => {
-                console.log('New Post Made.');
+                console.log('New Post Made.')
             })
-
-    },
-
-    // getPosts: () => {
-    //     return axios.get('/api/v1/allposts')
-    //         .then(res => {
-    //             const posts = res.data;
-    //             console.log(posts)
-    //             return posts
-    //         })
-    //         .catch(function (error) {
-    //             console.log(error);
-    //         });
-    // }
+    }
 }
