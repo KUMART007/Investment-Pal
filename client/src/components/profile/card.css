@@ -2,3 +2,40 @@
     max-width: 25%;
     background-color: #fff;
 }
+
+
+
+@media only screen and (max-width: 375px) {
+    .userCard {
+        font-size: 2vw;
+        max-width: 100%;
+    }
+
+    .list-group-item {
+        font-size: 5vw;
+    }
+
+    #profileImage {
+        height: 150px;
+    }
+
+}
+
+@media only screen and (max-width: 775px) {
+    .userCard {
+        font-size: 2vw;
+        max-width: 100%;
+        align: center;
+    }
+
+    .card-title {
+        font-size: 5vw;
+    }
+
+    .list-group-item {
+        font-size: 4vw;
+    }
+
+
+
+}

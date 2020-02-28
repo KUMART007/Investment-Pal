@@ -26,10 +26,10 @@ class Profile extends Component {
     render() {
         return (
             <div>
-            <Jumbotron>
+            <Jumbotron ClassName="profileJumbotron">
                 
                     <div className="userCard">
-                        <img src="https://via.placeholder.com/150" className="card-img-top" alt="profile" />
+                        <img src="https://via.placeholder.com/150" className="card-img-top" id="profileImage" alt="profile" />
                             <div className="card-body">
                                 <h5 className="card-title">PROFILE</h5>
                             </div>
