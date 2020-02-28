@@ -2,11 +2,13 @@ import React from 'react';
 import { Container, Jumbotron, Card, CardBody } from 'reactstrap';
 import MakePost from './modal';
 import Posts from './allPosts';
+import './postpage.css'
 
 function PostPage() {
     return (
         <div>
-            <Jumbotron>
+            <Jumbotron className="row">
+                <div className="col-sm-12">
                 <Container style={{margin: 'auto'}}>
                     <div className="text-left mb-2">
                         <MakePost />
@@ -19,6 +21,7 @@ function PostPage() {
                         </CardBody>
                     </Card>
                 </Container>
+                </div>
             </Jumbotron>
         </div>
     );

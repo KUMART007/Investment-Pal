@@ -14,3 +14,69 @@ padding-top: 15px;
 .right {
     padding-right: 10px;
 }
+
+h6 {
+    font-size: 26px;
+}
+
+.cardText {
+    font-size: 25px;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .posts {
+      font-size: large;
+    }
+
+    .inline {
+        font-size: large;
+      }
+  }
+
+  @media only screen and (max-width: 620px) {
+    .posts {
+      font-size: medium;
+    }
+
+    .inline {
+        font-size: medium;
+      }
+  }
+
+  @media only screen and (max-width: 520px) {
+    .posts {
+      font-size: small;
+    }
+
+    .inline {
+        font-size: small;
+      }
+  }
+
+  @media only screen and (max-width: 520px) {
+    .posts {
+      font-size: small;
+    }
+
+    .inline {
+        font-size: small;
+      }
+  }
+
+  @media only screen and (max-width: 375px) {
+    .inline {
+        font-size: 80%;
+      }
+
+    .row {
+        margin: auto;
+        max-width: 100%;
+    }
+
+    .cardPost {
+        margin: auto;
+        max-width: 100%;
+    }
+    
+  }

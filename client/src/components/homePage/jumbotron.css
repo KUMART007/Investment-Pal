@@ -15,3 +15,28 @@
 #bottomRow {
     margin-top: 25px;
 }
+
+
+@media only screen and (max-width: 375px) {
+    .userCard {
+        font-size: 2vw;
+        max-width: 100%;
+    }
+
+    .list-group-item {
+        font-size: 5vw;
+    }
+
+    #imgs {
+        height: 150px;
+    }
+
+    .mainTitle {
+        font-size: 9vw;   
+    }
+
+    .mainTitle2 {
+        font-size: 6vw;
+    }
+
+}

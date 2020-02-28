@@ -3,6 +3,7 @@ import axios from 'axios';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Box from '@material-ui/core/Box';
+import "./feed.css";
 
 
 import { AllHtmlEntities } from 'html-entities';
@@ -32,8 +33,8 @@ export default class RetrieveHeadlines extends Component {
                 <div>
                 <Card align="center" width={1}>
                 <CardContent>
-                <h1>Headlines source: </h1>
-                <h4><a href="https://soundmindinvesting.com/articles" target="_blank"rel="noopener noreferrer">https://soundmindinvesting.com/articles</a></h4>
+                <h1 className="cardHeadline">Headlines source: </h1>
+                <h4 className="cardContent"><a href="https://soundmindinvesting.com/articles" target="_blank"rel="noopener noreferrer">https://soundmindinvesting.com/articles</a></h4>
                 </CardContent>
                 </Card>
                 </div>
@@ -43,10 +44,10 @@ export default class RetrieveHeadlines extends Component {
                         <Box mt="15px" key={headline.id}>
                         <Card>
                         <CardContent>
-                        <div >
-                                <h2>{entities.decode(headline.title)}</h2>
-                                <h3>{entities.decode(headline.summary)}</h3>
-                                <h4>
+                        <div>
+                                <h2 className="headlineBody1">{entities.decode(headline.title)}</h2>
+                                <h3 className="headlineBody2">{entities.decode(headline.summary)}</h3>
+                                <h4 className="headlineBody3">
                                     <a href={headline.link} target="_blank"rel="noopener noreferrer">Continue Reading</a>
                                 </h4>
                             <br />
