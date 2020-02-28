@@ -1,8 +1,5 @@
-
-@media only screen and (max-width: 375px) {
 .container {
   margin: auto;
-  max-width: 95%;
-}
+  min-width: 90%;
 }
 

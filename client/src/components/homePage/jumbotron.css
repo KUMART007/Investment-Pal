@@ -3,9 +3,9 @@
 }
 
 .card {
+    height: 100%;
     margin: 0px;
 }
-
 
 .container {   
  max-width: 85%;
@@ -14,18 +14,100 @@
 
 #bottomRow {
     margin-top: 25px;
+    margin-bottom: 15px;
 }
 
+@media only screen and (max-width: 770px) {
+
+    #bottomRow {
+        margin-top: 0px;
+    }
+
+    .card {
+        height: 95%;
+        margin-bottom: 10px;
+    }
+
+    #imgs {
+        height: 200px;
+    }
+
+    .mainTitle {
+        font-size: 7vw;   
+    }
+
+    .mainTitle2 {
+        font-size: 4vw;
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+
+    #bottomRow {
+        margin-top: 0px;
+    }
+
+    .card {
+        margin-bottom: 10px;
+    }
+
+    #imgs {
+        height: 200px;
+    }
+
+    .mainTitle {
+        font-size: 8vw;   
+    }
+
+    .mainTitle2 {
+        font-size: 5vw;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    #bottomRow {
+        margin-top: 0px;
+    }
+
+    .card {
+        margin-bottom: 10px;
+    }
+
+    #imgs {
+        height: 200px;
+    }
+
+    .mainTitle {
+        font-size: 8vw;   
+    }
+
+    .mainTitle2 {
+        font-size: 5vw;
+    }
+
+}
 
 @media only screen and (max-width: 375px) {
-    .userCard {
+
+    #bottomRow {
+        margin-top: 0px;
+    }
+
+    .card {
+        margin-bottom: 10px;
+    }
+
+    /* .userCard {
         font-size: 2vw;
         max-width: 100%;
-    }
+    } 
 
     .list-group-item {
         font-size: 5vw;
-    }
+    } */
 
     #imgs {
         height: 150px;
@@ -40,3 +122,4 @@
     }
 
 }
+
