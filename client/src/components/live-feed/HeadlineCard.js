@@ -33,7 +33,7 @@ export default class RetrieveHeadlines extends Component {
                 <Card align="center" width={1}>
                 <CardContent>
                 <h1>Headlines source: </h1>
-                <h4><a href="https://soundmindinvesting.com/articles">https://soundmindinvesting.com/articles</a></h4>
+                <h4><a href="https://soundmindinvesting.com/articles" target="_blank"rel="noopener noreferrer">https://soundmindinvesting.com/articles</a></h4>
                 </CardContent>
                 </Card>
                 </div>
