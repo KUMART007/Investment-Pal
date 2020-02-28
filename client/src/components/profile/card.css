@@ -1,41 +1,68 @@
 .userCard {
-    max-width: 25%;
+    width: 260px;
+    height: 400px;
     background-color: #fff;
 }
 
+.profileJumbotron {
+    min-height: 560px;
+}
 
+#profileImage {
+    height: 192px;
+}
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 775px) {
+
+    .profileJumbotron {
+        padding-top: 25px;
+    }
+    .userCard {
+        margin: auto;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
     .userCard {
         font-size: 2vw;
         max-width: 100%;
     }
 
     .list-group-item {
-        font-size: 5vw;
+        font-size: 3.5vw;
+    }
+
+    #profileImage {
+        height: 192px;
+    }
+
+}
+
+@media only screen and (max-width: 375px) {
+    .userCard {
+        font-size: 2vw;
+        max-width: 90%;
+    }
+
+    .card-title {
+        text-align: center;
+        margin-bottom: 0px;
+    }
+
+    .list-group-item {
+        margin: auto;
+        font-size: 4vw;
+    }
+
+    .email {
+        padding-left: 5px;
+        padding-right: 5px;
+        margin: auto;
     }
 
     #profileImage {
         height: 150px;
     }
-
-}
-
-@media only screen and (max-width: 775px) {
-    .userCard {
-        font-size: 2vw;
-        max-width: 100%;
-        align: center;
-    }
-
-    .card-title {
-        font-size: 5vw;
-    }
-
-    .list-group-item {
-        font-size: 4vw;
-    }
-
-
 
 }
