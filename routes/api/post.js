@@ -2,7 +2,6 @@
 const router = require('express').Router();
 const db = require('../../models');
 
-
 router.route('/posts').post((req, res) => {
   const postData = {
     user_name: req.body.user_name,
