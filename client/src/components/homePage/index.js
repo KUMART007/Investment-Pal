@@ -5,7 +5,7 @@ import './jumbotron.css'
 function Home() {
     return (
         <div>
-        <Jumbotron className="bg-success">
+        <Jumbotron className="bg-success" id="welmargin">
             <Container className="text-center text-white">
                 <h1 className="mainTitle">Welcome to InvestmentPal</h1>
                 <hr />
@@ -15,7 +15,7 @@ function Home() {
 
       
         <Row className="container">
-        <Col md="6" lg="6">
+        <Col className="colsize" md="6" lg="6">
         <div className="card">
             <img src="https://cdn.pixabay.com/photo/2017/09/07/08/54/money-2724241__340.jpg" className="card-img-top" id="imgs" alt="img1" />
             <div className="card-body">

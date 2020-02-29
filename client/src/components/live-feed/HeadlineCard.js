@@ -30,9 +30,9 @@ export default class RetrieveHeadlines extends Component {
         return (
             <div>
                 <React.Fragment>
-                    <div>
-                        <Card align="center" width={1}>
-                            <CardContent>
+                    <div className="cardsize">
+                        <Card className="card1" align="center" width={1}>
+                            <CardContent style={{ padding: '0px' }}>
                                 <h1 className="cardHeadline">Headlines source: </h1>
                                 <h4 className="cardContent"><a href="https://soundmindinvesting.com/articles" target="_blank" rel="noopener noreferrer">https://soundmindinvesting.com/articles</a></h4>
                             </CardContent>
@@ -41,7 +41,7 @@ export default class RetrieveHeadlines extends Component {
                     <br />
                     <div>
                         {this.state.headlines.map(headline =>
-                            <Box mt="15px" key={headline.id}>
+                            <Box p="5px" mt="15px" key={headline.id}>
                                 <Card>
                                     <CardContent>
                                         <div>
