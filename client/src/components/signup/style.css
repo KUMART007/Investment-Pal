@@ -1,3 +1,19 @@
 #margin {
     margin-bottom: 15px;
 }
+
+@media only screen and (max-width: 400px) {
+
+    .signup-pad {
+        padding: 0px;
+    }
+  
+    .signup-margin {
+      margin-right: 0px;
+      margin-left: 0px;
+      padding-left: 0px;
+      padding-right: 0px;
+      margin: auto;
+  
+    }
+  }

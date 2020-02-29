@@ -36,9 +36,9 @@ class Login extends Component {
 
   render() {
     return (
-      <div className="container" id="margin">
+      <div className="container login-margin1" id="margin1">
         <div className="row">
-          <div className="col-md-6 mt-4 mx-auto">
+          <div className="col-md-6 mt-4 mx-auto login-pad">
             <form noValidate onSubmit={this.onSubmit}>
               <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
               <div className="form-group">

@@ -32,9 +32,18 @@ h6 {
     .inline {
         font-size: large;
       }
+
+      .right {
+        font-size: 23px;
+      }
+
+      .cardText {
+        font-size: 20px;
+    }
   }
 
-  @media only screen and (max-width: 620px) {
+  @media only screen and (max-width: 600px) {
+
     .posts {
       font-size: medium;
     }
@@ -42,36 +51,68 @@ h6 {
     .inline {
         font-size: medium;
       }
+
+      .right {
+        font-size: 23px;
+      }
+
+      .cardText {
+        font-size: 20px;
+    }
   }
 
-  @media only screen and (max-width: 520px) {
-    .posts {
-      font-size: small;
+  @media only screen and (max-width: 460px) {
+    .post-container {
+      margin-right: -30px;
+      margin-left: -30px;
     }
 
-    .inline {
-        font-size: small;
-      }
-  }
-
-  @media only screen and (max-width: 520px) {
-    .posts {
-      font-size: small;
+    .post-div {
+      margin-left: 0px;
+      margin-right: 0px;
+      padding-left: 0px;
+      padding-right: 0px;
     }
 
-    .inline {
-        font-size: small;
-      }
+    .post-container2 {
+      margin-left: 0px;
+      margin-right: 0px;
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    
   }
 
   @media only screen and (max-width: 375px) {
+
+    .wide-container1 {
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+
+    .card3 {
+      padding: 10px;
+    }
+
+    .title-text1 {
+      font-size: 20px;
+    }
+  
+    .cardText {
+      font-size: 15px;
+    } 
+
     .inline {
-        font-size: 80%;
-      }
+      font-size: 80%;
+    }
+
+    .right {
+      font-size: 15px;
+    }
 
     .row {
-        margin: auto;
-        max-width: 100%;
+      margin: auto;
+      max-width: 100%;
     }
 
     .cardPost {

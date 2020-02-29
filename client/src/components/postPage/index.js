@@ -6,17 +6,17 @@ import './postpage.css'
 
 function PostPage() {
     return (
-        <div>
-            <Jumbotron className="row">
-                <div className="col-sm-12">
-                    <Container style={{ margin: 'auto' }}>
+        <div className="wide-container1">
+            <Jumbotron className="row post-container">
+                <div className="col-sm-12 post-div">
+                    <Container className="post-container2" style={{ margin: 'auto' }}>
                         <div className="text-left mb-2">
                             <MakePost />
                         </div>
                     </Container>
-                    <Container style={{ margin: 'auto' }}>
+                    <Container className="post-container2" style={{ margin: 'auto' }}>
                         <Card>
-                            <CardBody>
+                            <CardBody className="card3">
                                 <Posts />
                             </CardBody>
                         </Card>
