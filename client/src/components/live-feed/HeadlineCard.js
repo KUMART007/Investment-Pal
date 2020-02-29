@@ -31,7 +31,7 @@ export default class RetrieveHeadlines extends Component {
             <div>
                 <React.Fragment>
                     <div className="cardsize">
-                        <Card className="card" align="center" width={1}>
+                        <Card className="card1" align="center" width={1}>
                             <CardContent style={{ padding: '0px' }}>
                                 <h1 className="cardHeadline">Headlines source: </h1>
                                 <h4 className="cardContent"><a href="https://soundmindinvesting.com/articles" target="_blank" rel="noopener noreferrer">https://soundmindinvesting.com/articles</a></h4>
