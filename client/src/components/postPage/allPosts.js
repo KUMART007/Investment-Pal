@@ -27,11 +27,11 @@ export default class Posts extends React.Component {
         {this.state.posts.map(post =>
           <div className="pad" key={post.pid}>
             <Card className="cardPost">
-              <CardHeader tag='h3'>{post.title}</CardHeader>
+              <CardHeader className="title-text1" tag='h3'>{post.title}</CardHeader>
               <CardBody className="cardBodyPost">
                 <div className='lineup'>
                   <h6 className="inline right">Posted by: </h6>
-                  <h2 className="inline">{post.user_name}</h2>
+                  <h2 className="inline right">{post.user_name}</h2>
                 </div>
                 <br />
                 <CardText className="cardText">{post.body}</CardText>
