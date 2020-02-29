@@ -6,9 +6,9 @@ import "./feed.css";
 function LiveFeed() {
     return (
         <Jumbotron>
-            <Container>
+            <Container className="con-width">
                 <div className="background-color: #eee;">
-                    <div className="jumbotron w-75 p-3 mx-auto">
+                    <div className="jumbotron">
                         <h1 className="display-3 text-center text-success" id="headlineTitle">Daily Investment News</h1>
                         <p className="lead"></p>
                         <hr className="my-4" />

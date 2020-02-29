@@ -1,24 +1,63 @@
 
 @media only screen and (max-width: 880px) {
+    
     #headlineTitle {
-        font-size: 10vw;
+        font-size: 9vw;
+    }
+
+    .headlineBody1 {
+        font-size: 4vw;
+    }
+    .headlineBody2 {
+        font-size: 3vw;
+    }
+    .headlineBody3 {
+        font-size: 3.5vw;
     }
 }
 
 @media only screen and (max-width: 785px) {
-    .cardContent {
-        font-size: 2vw;
-    }
-}
 
-@media only screen and (max-width: 375px) {
+    .jumbotron {
+        margin-bottom: 0px;
+    }
+
     .cardContent {
         font-size: 3vw;
     }
 
-    .cardHeadline {
-        font-size: 7vw;
+    .headlineBody1 {
+        font-size: 4vw;
     }
+    .headlineBody2 {
+        font-size: 3vw;
+    }
+    .headlineBody3 {
+        font-size: 3.5vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .jumbotron {
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-bottom: 0px;
+    }
+
+    .con-width {
+        padding: 0px;
+    }
+
+    .cardHeadline {
+        padding-top: 5px;
+        font-size: 6vw;
+    }
+   
+    .cardContent {
+        padding: 5px;
+        font-size: 3.5vw;
+    } 
 
     .headlineBody1 {
         font-size: 5vw;
@@ -28,5 +67,56 @@
     }
     .headlineBody3 {
         font-size: 4vw;
+    }
+}
+
+@media only screen and (max-width: 475px) {
+    .jumbotron {
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-bottom: 0px;
+    }
+
+    .con-width {
+        padding: 0px;
+    }
+
+    
+    .cardHeadline {
+        padding: 5px;
+        font-size: 8vw;
+    }
+   
+    .cardContent {
+        padding: 5px;
+        font-size: 3.5vw;
+    } 
+}
+
+@media only screen and (max-width: 375px) {
+    .jumbotron {
+        margin-bottom: 0px;
+    }
+
+    .con-width {
+        padding: 0px;
+    }
+
+    .cardsize {
+        height: 100px;
+    }
+
+    .card {
+        height: 100px;
+    }
+
+    .cardContent {
+        padding-top: 10px;
+        font-size: 3.1vw;
+    }
+
+    .cardHeadline {
+        padding-top: 20px;
+        font-size: 6vw;
     }
 }

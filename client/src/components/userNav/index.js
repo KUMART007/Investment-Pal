@@ -31,7 +31,7 @@ class UserNav extends Component {
             <ul className="navbar-nav mr-auto">
                 <li className="nav-item active">
                     <Link to="/profile" className="nav-link">
-                        User <span className="sr-only">(current)</span>
+                        Profile <span className="sr-only">(current)</span>
                     </Link>
                 </li>
                 <li className="nav-item active">
